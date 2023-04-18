@@ -1,0 +1,29 @@
+import turtle
+
+# Create a turtle object to draw the ball
+
+ball = turtle.Turtle()
+
+ball.shape("circle")
+
+ball.color("red")
+
+ball.penup()
+
+# Define a function to move the ball down
+
+def drop_ball(x, y):
+
+    ball.goto(x, y)
+
+    for i in range(20):
+
+        ball.goto(ball.xcor(), ball.ycor() - 10)
+
+# Call the drop_ball function when the ball is clicked
+
+ball.onclick(drop_ball)
+
+# Start the turtle event loop
+
+turtle.mainloop()
